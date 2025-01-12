@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feynmann Technique</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <a href="../index.html" class="left">Home</a>
+            <div class="right">
+                <a href="./contactUs.html">Contact Us</a>
+                <a href="./purpose.html">Purpose</a>
+            </div>
+        </div>
+    </nav>
+    <h1 class="title">Feynmann Technique</h1>
+
+    <div class="typing-container">
+        <div class="typing-sub-container">        
+            <label for="dynamicTextarea" class="typing-title">Explain Topic:</label>
+            <textarea id="dynamicTextarea" placeholder="Start typing..."></textarea>
+            <label for="dynamicTextarea" class="typing-title" style="margin-top: 20px;">Knowledge Gaps:</label>
+            <textarea id="dynamicTextarea2" placeholder="Start typing..."></textarea>
+            <button onclick="exportToTxt()" id="exportButton">Export</button>
+        </div>
+    </div>
+
+    <script src="scriptFeynmann.js"></script>
+    
+
+    <div class="technique-dashboard">
+        <div class="technique-card">
+            <div class="technique-card-title">What is the Feynmann Technique?</div>
+            <div class="technique-card-description">
+                The Feynman Technique is a study method designed to deepen understanding by teaching 
+                a concept in simple terms. It involves breaking down complex ideas into plain language, 
+                identifying gaps in knowledge, and refining explanations.
+
+                <br><br>
+
+                The technique is attributed to physicist Richard Feynman, who was known for his ability 
+                to explain complex scientific concepts clearly. He developed this method as part of his 
+                learning process to ensure he fully understood topics he studied or taught.
+            </div>
+        </div>
+        <div class="technique-card">
+            <div class="technique-card-title">The Process</div>
+            <div class="technique-card-description">
+                <ul>
+                    <li>Explain the concept you want to learn as if you were teaching it to a 12-year-old. Write this 
+                        on the explanation text box. Use plain, simple language and avoid jargon, focusing on clarity.
+                    </li><br>
+                    <li>While explaining, identify areas where you struggle to simplify, are unsure of the details,
+                         or realize you don't fully understand the concept. Write down these things in the knowledge gaps
+                          text box.</li><br>
+                    <li>Go back to the source material and research the gaps you identified. Go to your explanation text box and
+                         refine it by filling in the gaps you determined until it's effective.
+                    </li><br>
+                    <li>Repeat the process until you can explain the concept clearly and confidently and export your text to a text file through the export button.
+                   </li><br>
+                   <li>Recommendation: It's a good practice to use analogies or incorporate everyday examples.</li><br>
+                   <li>Note: To remove everything you've written in both textboxes, just refresh the page.</li><br>
+                </ul>                
+            </div>
+        </div>
+        <div class="technique-card" style="margin-bottom: 20px">
+            <div class="technique-card-title">Benefits</div>
+            <div class="technique-card-description" style="margin-bottom:10px;">
+                <ul>
+                    <li>Forces engagement with the material.</li><br>
+                    <li>Highlights weak points in understanding.</li><br>
+                    <li>Builds the ability to communicate complex ideas effectively.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

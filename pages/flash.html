@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flashcards</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <a href="../index.html" class="left">Home</a>
+            <div class="right">
+                <a href="./contactUs.html">Contact Us</a>
+                <a href="./purpose.html">Purpose</a>
+            </div>
+        </div>
+    </nav>
+    <h1 class="title">Flashcards</h1>
+
+    <div id="base" style="display: flex; flex-direction: column">
+        <div id="questionApp">
+                <h1 style="color: white; margin-bottom: 0; display: flex; justify-content: center;">Create Flashcard:</h1>
+                <div class="typing-container">
+                    <div class="typing-sub-container">
+                        <textarea id="dynamicTextarea" style = "margin-bottom: 10px;" placeholder="Front..."></textarea>
+                        <textarea id="dynamicTextarea2" placeholder="Back..."></textarea>
+                        <button onclick="addFlashcard()" id="flipButton">Create</button>
+                    </div>
+                </div>
+                <h1 style="color: white; margin-bottom: 0; display: flex; justify-content: center; margin-top: 45px;">Quick Access:</h1>
+                <div class="typing-container">
+                    <div class="typing-sub-container">
+                        <label for="dynamicTextarea" style = "margin-bottom: 10px;" class="typing-title">Choose a .txt file of your saved flashcards then press upload:</label>
+                        <div style="display:flex;justify-content:center;">
+                            <input type="file" id="fileInput" accept=".txt" onchange="updateFileName()" />
+                            <p id="fileNameDisplay"></p>
+                        </div>
+                        <div style="display: flex; justify-content: center;">
+                            <button onclick="processFile()" id="flipButton" style="margin-right: 10px; width: 100px;">Upload</button>
+                            <button onclick="clearFile()" id="stopButton" style="margin-left: 10px; margin-top: 20px; width: 100px;">Clear</button>
+                        </div>
+                    </div>
+                </div>
+        </div>
+        <div id="resolvedContainer" class="typing-container" style="width: 85vw; display: flex; align-self: center;"></div>
+    </div>
+
+    <script src="scriptFlash.js"></script>
+    
+
+    <div class="technique-dashboard">
+        <div class="technique-card">
+            <div class="technique-card-title">What are Flashcards?</div>
+            <div class="technique-card-description">
+                Flashcards are a learning tool used to aid memory retention. They consist of a card with a
+                question, word, or concept on one side and the corresponding answer or explanation on the
+                other. Flashcards can be physical or digital, and they help learners reinforce knowledge.
+
+            </div>
+        </div>
+        <div class="technique-card">
+            <div class="technique-card-title">The Process</div>
+            <div class="technique-card-description">
+                <ul>
+                    <li>Write a question or term on the front of the card.
+                    </li><br>
+                    <li>Write the answer or explanation on the back.</li><br>
+                    <li>Review the flashcards you created.
+                    </li><br>
+                    <li>Test your knowledge with Test mode. In this mode, you can randomly go through your flashcards, and if you know the term or the answer you click Master.
+                         You can also retry each flashcard if you don't know it yet. On the top-right corner, you can see how many flashcards
+                          you have mastered. Once you master them all or click Stop, you will exit test mode.
+                   </li><br>
+                   <li>Export your flashcards and save the file so that you can save your flashcards and have access to them
+                     by simply uploading the file in the quick access section.</li><br>
+                </ul>                
+            </div>
+        </div>
+        <div class="technique-card" style="margin-bottom: 20px">
+            <div class="technique-card-title">Benefits</div>
+            <div class="technique-card-description">
+                <ul>
+                    <li>Promotes memory retention by forcing you to retrieve information from memory.</li><br>
+                    <li>Provides a focused, interactive learning experience.</li><br>
+                    <li>Easy to use anywhere, by exporting your file with the flashcards to save them.</li><br>
+                    <li>Can be tailored to any subject or type of information.</li><br>
+                    <li>Enhances learner engagement through self-testing, which can be more effective than passive study methods.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

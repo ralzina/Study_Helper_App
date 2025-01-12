@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Active Recall</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <a href="../index.html" class="left">Home</a>
+            <div class="right">
+                <a href="./contactUs.html">Contact Us</a>
+                <a href="./purpose.html">Purpose</a>
+            </div>
+        </div>
+    </nav>
+    <h1 class="title">Active Recall</h1>
+
+    <div class="timer">
+        <div class="container">
+            <h1>Countdown Timer</h1>
+
+             <!-- Inputs for Study Time-->
+             <div class="input-container">
+                <label for="studyMinutes">Study Time (Minutes):</label>
+                <input type="number" id="studyMinutes" min="0" value="25" required>
+                <label for="studySeconds">Study Time (Seconds):</label>
+                <input type="number" id="studySeconds" min="0" value="0" required>
+            </div>
+            
+            <!-- Start and pause and stop button -->
+            <div class="input-container">
+                <button id="startButton">Start</button>
+                <button id="pauseButton">Pause</button>
+                <button id="stopButton">Reset</button>
+            </div>
+            
+            <!-- Timer Display -->
+            <div id="timerDisplay" class="timer-display">
+                00:00
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sound for alert -->
+    <audio id="alertSound" src="../sounds/alert.mp3"></audio>
+
+    <div class="typing-container">
+        <div class="typing-sub-container">        
+            <label for="dynamicTextarea" class="typing-title">Recall your knowledge:</label>
+            <textarea id="dynamicTextarea" placeholder="Start typing..."></textarea>
+            <button onclick="exportToTxt()" id="exportButton">Export</button>
+        </div>
+    </div>
+
+    <!--Export to Microsoft Word: <script src="https://cdn.jsdelivr.net/npm/docx"></script>-->
+    <script src="scriptActive.js"></script>
+    
+
+    <div class="technique-dashboard">
+        <div class="technique-card">
+            <div class="technique-card-title">What is Active Recall?</div>
+            <div class="technique-card-description">
+                Active Recall is a learning method where you actively retrieve information 
+                from memory instead of passively reviewing notes. It strengthens memory 
+                retention and identifies knowledge gaps.
+            </div>
+        </div>
+        <div class="technique-card">
+            <div class="technique-card-title">The Process</div>
+            <div class="technique-card-description">
+                <ul>
+                    <li>Study the Material: Set a timer to read or learn the topic thoroughly at your preferred time. When the timer starts running, the input boxes for minutes and seconds are all disabled. In the case that you have an unexpected reason
+                        to stop studying but don't want the timer to keep running, you can click pause to pause the timer and click start when you're ready to keep studying. In the case that you want to reset your timer because you have to leave or want to change the time,  you can click reset and this button will reactivate the 
+                         input boxes of the minutes and seconds.</li><br>
+                    <li>Recall Without Notes: Test yourself by writing what you remember.</li><br>
+                    <li>Review and Repeat: Export your writing by clicking the export button and compare your knowledge in the saved text file to the material, correct mistakes, and revisit challenging areas.</li>
+                </ul>                
+            </div>
+        </div>
+        <div class="technique-card" style="margin-bottom: 20px">
+            <div class="technique-card-title">Benefits</div>
+            <div class="technique-card-description" style="margin-bottom:10px;">
+                <ul>
+                    <li>Improves Retention: Retrieval practice strengthens memory.</li><br>
+                    <li>Identifies Weaknesses: Reveals gaps in understanding.</li><br>
+                    <li>Boosts Exam Readiness: Mimics real-world recall needs.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <a href="../index.html" class="left">Home</a>
+            <div class="right">
+                <a href="./contactUs.html">Contact Us</a>
+                <a href="./purpose.html">Purpose</a>
+            </div>
+        </div>
+    </nav>
+    <h1 class="title">Pomodoro</h1>
+
+    <div class="timer">
+        <div class="container">
+            <h1>Countdown Timer</h1>
+
+            <!-- Select study or break -->
+             <div class="input-container">
+                <label for="mode">Mode:</label>
+                <select id="mode">
+                    <option value="study">Study</option>
+                    <option value="break">Break</option>
+                </select>
+             </div>
+
+             <!-- Inputs for Study Time-->
+             <div class="input-container">
+                <label for="studyMinutes">Study Time (Minutes):</label>
+                <input type="number" id="studyMinutes" min="0" value="25">
+                <label for="studySeconds">Study Time (Seconds):</label>
+                <input type="number" id="studySeconds" min="0" value="0">
+            </div>
+    
+            <!-- Inputs for Break Time -->
+            <div class="input-container">
+                <label for="breakMinutes">Break Time (Minutes):</label>
+                <input type="number" id="breakMinutes" min="0" value="5">
+                <label for="breakSeconds">Break Time (Seconds):</label>
+                <input type="number" id="breakSeconds" min="0" value="0">
+            </div>
+            
+            <!-- Start and stop button -->
+            <div class="input-container">
+                <button id="startButton">Start</button>
+                <button id="pauseButton">Pause</button>
+                <button id="stopButton">Reset</button>
+            </div>
+            
+            <!-- Timer Display -->
+            <div id="timerDisplay" class="timer-display">
+                00:00
+            </div>
+        </div>
+    </div>
+    
+    <!-- Sound for alert -->
+    <audio id="alertSound" src="../sounds/alert.mp3"></audio>
+    
+    <script src="scriptPomodoro.js"></script>
+
+    <div class="technique-dashboard">
+        <div class="technique-card">
+            <div class="technique-card-title">What is the Pomodoro Technique?</div>
+            <div class="technique-card-description">
+                The Pomodoro Technique is a time management strategy designed to 
+                improve focus and productivity by dividing work into intervals called "Pomodoros." 
+                Each Pomodoro lasts 25 minutes, followed by a short break. After completing a set 
+                number of intervals, you take a longer break. Developed by Francesco Cirillo in the 
+                late 1980s, it is named after the tomato-shaped timer he used while studying.
+            </div>
+        </div>
+        <div class="technique-card">
+            <div class="technique-card-title">The Process</div>
+            <div class="technique-card-description">
+                <ul>
+                    <li>Set a Timer: Set a timer for 25 minutes, the duration of one Pomodoro. You can edit this time by clicking on the textboxes.
+                         You can edit the minutes and seconds of both your study time and break time. You can also select what mode you want, so if you select 
+                         study mode, the timer will count your study time, if you set break mode, it will count your break time.
+                    </li><br>
+                    <li>Work Intensely: Focus entirely on the task until the timer rings. Avoid distractions and interruptions. When the timer starts running, the input boxes for minutes and seconds as well as the mode selector are all disabled. In the case that you have an unexpected reason
+                         to stop studying but don't want the timer to keep running, you can click pause to pause the timer and click start when you're ready to keep studying or relaxing
+                          if you're on break time. In the case that you want to reset your timer becasue you have to leave or want to change the time,  you can click reset and this button will reactivate the mode and the 
+                          input boxes of the minutes and seconds for study and break.
+                    </li><br>
+                    <li>Take a Short Break: After 25 minutes, or whatever time you selected to study, take your preferred break to relax. The mode selector will automatically shift between study and break mode when the timer finishes. You can also edit this time</li><br>
+                    <li>Repeat: Complete 4 Pomodoros, then take a longer break of 15-30 minutes.</li>
+                </ul>                
+            </div>
+        </div>
+        <div class="technique-card" style="margin-bottom: 20px">
+            <div class="technique-card-title">Benefits</div>
+            <div class="technique-card-description" style="margin-bottom:10px;">
+                <ul>
+                    <li>Enhanced Focus: Short, timed intervals encourage deep concentration and reduce procrastination.</li><br>
+                    <li>Prevents Burnout: Regular breaks refresh your mind, preventing mental fatigue.</li><br>
+                    <li>Time Awareness: The structured method helps you estimate task duration more accurately.</li><br>
+                    <li>Increased Productivity: Breaking work into manageable intervals keeps motivation high.</li><br>
+                    <li>Improved Work-Life Balance: Encourages stepping away from work periodically, reducing overworking.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

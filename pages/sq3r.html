@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SQ3R</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+            <a href="../index.html" class="left">Home</a>
+            <div class="right">
+                <a href="./contactUs.html">Contact Us</a>
+                <a href="./purpose.html">Purpose</a>
+            </div>
+        </div>
+    </nav>
+    <h1 class="title">SQ3R</h1>
+
+    <div id="questionApp">
+        <div class="typing-container">
+            <div class="typing-sub-container">
+                <label for="dynamicTextarea" class="typing-title">Enter a question</label>
+                <textarea id="dynamicTextarea" placeholder="Type your question..."></textarea>
+                <button onclick="addQuestion()" id="exportButton">Submit</button>
+            </div>
+        </div>
+        <h1 style="color: white; margin-bottom: 0; display: flex; justify-content: center; margin-top: 45px;">Quick Access:</h1>
+        <div class="typing-container">
+            <div class="typing-sub-container">
+                <label for="dynamicTextarea" style = "margin-bottom: 10px;" class="typing-title">Choose a .txt file of your saved questions then press upload:</label>
+                <div style="display:flex;justify-content:center;">
+                    <input type="file" id="fileInput" accept=".txt" onchange="updateFileName()" />
+                    <p id="fileNameDisplay"></p>
+                </div>
+                <div style="display: flex; justify-content: center;">
+                    <button onclick="processFile()" id="flipButton" style="margin-right: 10px; width: 100px;">Upload</button>
+                    <button onclick="clearFile()" id="stopButton" style="margin-left: 10px; margin-top: 20px; width: 100px;">Clear</button>
+                </div>
+            </div>
+        </div>
+        <div id="questionsContainer" class="typing-container" style="width: 85vw; display: flex; align-self: center;"></div>
+        <div id="resolvedContainer" class="typing-container" style="width: 85vw; display: flex; align-self: center;"></div>
+    </div>
+
+    <script src="scriptSQ3R.js"></script>
+    
+
+    <div class="technique-dashboard">
+        <div class="technique-card">
+            <div class="technique-card-title">What is SQ3R?</div>
+            <div class="technique-card-description">
+                The SQ3R method is a structured approach to studying, designed to enhance comprehension and retention 
+                of material. The technique was developed by Francis P. Robinson, an American educational psychologist,
+                 in his 1946 book <i>Effective Study</i>. SQ3R is an acronym that stands for Survey, Question, Read, Recite,
+                 Review. It focuses on active engagement with the material, helping learners process and remember information more 
+                 effectively.
+            </div>
+        </div>
+        <div class="technique-card">
+            <div class="technique-card-title">The Process</div>
+            <div class="technique-card-description">
+                <ul>
+                    <li>Survey: Quickly scan the material to get an overview of the content and structure.
+                    </li><br>
+                    <li>Question: Formulate questions based on the headings or key points you identified during the survey step and write each question on the text box at the top. Press submit when you're done creating each question.
+                         It is preferred if you only submit 1 question at a time. The questions you create will be at the Questions section and each question will have its own textbox so that you can type in the answer.
+                    </li><br>
+                    <li>Read: Carefully read the material to find answers to the questions you created and type the answer of each question in their corresponding textbox. Once the answer of a question is done click Resolve.
+                    </li><br>
+                    <li>Recite: Try to summarize the information as much as you can in your own words. If you need to edit one of the resolved questions, press the Edit button. This will move the question from the Resolved Questions section and 
+                        put it in the Questions seciton with a textbox so that you can edit the text. You can also Delete individual questions or resolved questions if you don't want them anymore through the Delete button, and you can also Clear all of 
+                        your answered or unanswered questions through the Clear button at the bottom of both the Questions section and the Resolved Questions section.
+                   </li><br>
+                   <li>Review: Revisit your questions periodically to solidify retention and comprehension.</li><br>
+                   <li>Export and Quick Access: If you want to save your work, you can export all of your resolved questions to a text file. Then, you can upload that text file into the Quick Access section so that you can reload all of the questions you saved.
+                     Once you reload your questions through Quick Access, you can keep editing them or studying them.
+                   </li>
+                </ul>                
+            </div>
+        </div>
+        <div class="technique-card" style="margin-bottom: 20px">
+            <div class="technique-card-title">Benefits</div>
+            <div class="technique-card-description" style="margin-bottom:10px;">
+                <ul>
+                    <li>Encourages active reading, helping you understand the material deeply.</li><br>
+                    <li>Formulating questions keeps you engaged and attentive during study sessions.</li><br>
+                    <li>Provides a structured way to approach dense or complex material.</li><br>
+                    <li>Maximizes study efficiency.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
