@@ -94,10 +94,8 @@ function startTimer() {
 
     updateTimer();
 
-    if(timeRemaining>0){
-        // Start countdown
-        timer = setInterval(updateTimer, 1000);
-    }
+    
+    timer = setInterval(updateTimer, 1000);
 }
 
 function next() {
