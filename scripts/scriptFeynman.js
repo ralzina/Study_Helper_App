@@ -36,7 +36,7 @@ async function exportToTxt() {
     const link1 = document.createElement("a");
 
     link1.href = URL.createObjectURL(blob1);
-    link1.download = "feynmann.txt";
+    link1.download = "feynman.txt";
     link1.click();
 
     URL.revokeObjectURL(link1.href);
