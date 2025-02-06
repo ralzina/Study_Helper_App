@@ -1,3 +1,5 @@
+// Author: Rene Alzina
+
 let questions = []; // array to store questions
 let content = []; // array to store question content
 let resolved = []; // array to store resolved questions

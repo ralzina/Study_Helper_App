@@ -1,3 +1,5 @@
+// Author: Rene Alzina
+
 let timer;
 let timeRemaining = 0; // Default
 
@@ -80,6 +82,7 @@ function updateTimer(){
         document.getElementById("timerDisplay").textContent = "00:00";
         
         // Play alert sound
+        // Sound credits: Morning Alarm by Tsundere Twintails - https://www.youtube.com/watch?v=RJJkUV2b3Eo
         document.getElementById("alertSound").play();
         
         next()

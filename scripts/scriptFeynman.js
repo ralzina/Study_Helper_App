@@ -1,3 +1,5 @@
+// Author: Rene Alzina
+
 // Textbox
 const textarea = document.getElementById('dynamicTextarea');
 

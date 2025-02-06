@@ -1,3 +1,5 @@
+// Author: Rene Alzina
+
 let front = []; // array to store questions
 let back = []; // array to store resolved questions
 let flipped = [];
